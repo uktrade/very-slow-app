@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def sleep_endpoint():
-    time.sleep(10)
+    time.sleep(3)
     return 'OK'
 
 
@@ -21,7 +21,7 @@ def compute_endpoint():
     View that actively utilizes one CPU core for 10s
     :return:
     """
-    wait_for_seconds = 10
+    wait_for_seconds = 3
     now_time = start_time = time.time()
     while now_time - start_time < wait_for_seconds:
         slow_func()
